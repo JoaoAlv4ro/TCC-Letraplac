@@ -36,6 +36,13 @@ CREATE TABLE IF NOT EXISTS `DB_Letraplac` . `TB_user_address` (
     
     PRIMARY KEY (`address_id`)
 ) ENGINE = InnoDB DEFAULT CHARACTER SET utf8mb4;
+
+	/*------------ INSERTS ------------*/
+	INSERT INTO TB_user_login VALUES (DEFAULT, "Álvaro", "689.508.377-47", "2004-07-02", "joaosilvaabc1@gmail.com", "(12) 99637-4429", "Senha", "A");
+	INSERT INTO TB_user_login VALUES (DEFAULT, "Vitor", "400.892.233-24", "2004-09-27", "joaovitorabc2@gmail.com", "(12) 992324-2526", "Senha", "C");
+    INSERT INTO TB_user_login VALUES (DEFAULT, "Marco", "678.321.594-10", "2003-07-21", "marcoantoniabc3@gmail.com", "(12) 99452-3132", "Senha", "C");
+    /*------------ INSERTS END ------------*/
+
 /*------------ USER END ------------*/
 
 /*------------ PRODUCT ------------*/
@@ -110,3 +117,5 @@ CREATE TABLE IF NOT EXISTS `DB_Letraplac` . `TB_feedback` (
     PRIMARY KEY (`feedback_id`)
 ) ENGINE = InnoDB DEFAULT CHARACTER SET utf8mb4;
 /*------------ FEEDBACK END ------------*/
+
+
