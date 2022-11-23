@@ -1,4 +1,4 @@
--- Author: João Álvaro
+-- Owner: Letraplac
 -- Version: 2.0
 DROP SCHEMA IF EXISTS `DB_Letraplac`;
 CREATE SCHEMA IF NOT EXISTS `DB_Letraplac` DEFAULT CHARACTER SET utf8mb4;
