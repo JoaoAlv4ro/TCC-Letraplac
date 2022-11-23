@@ -72,9 +72,9 @@ CREATE TABLE IF NOT EXISTS `DB_Letraplac` . `TB_demand` (
     `demand_date` DATE NOT NULL,
     `demand_status` ENUM("A","P","E") NOT NULL,
     /*Analise, Produção e Enviado*/
-    `demand_value` DECIMAL(4,2) NOT NULL,
+    `demand_value` DECIMAL(6,2) NOT NULL,
     `demand_border_type` ENUM("1","2","3") NOT NULL,
-    `demand_info` VARCHAR(75) NOT NULL,
+    `demand_info` VARCHAR(256) NOT NULL,
     `demand_photo` VARCHAR(50),
     `user_id` INT NOT NULL,
     `product_id` INT NOT NULL,
@@ -96,6 +96,12 @@ CREATE TABLE IF NOT EXISTS `DB_Letraplac` . `TB_demand` (
 
     PRIMARY KEY (`demand_id`)
 ) ENGINE = InnoDB DEFAULT CHARACTER SET utf8mb4;
+
+    /*------------ INSERTS ------------*/
+    INSERT INTO TB_demand VALUES (DEFAULT, 1, "2022-11-21", "A", "20.00", "1", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "", "1", "1");
+    INSERT INTO TB_demand VALUES (DEFAULT, 2, "2022-11-22", "P", "100.00", "2", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "", "2", "2");
+    INSERT INTO TB_demand VALUES (DEFAULT, 3, "2022-11-23", "E", "360.00", "3", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "", "3", "3");
+    /*------------ INSERTS END ------------*/
 /*------------ DEMAND END ------------*/
 
 /*------------ FEEDBACK ------------*/
