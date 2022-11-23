@@ -51,11 +51,18 @@ CREATE TABLE IF NOT EXISTS `DB_Letraplac` . `TB_product` (
     `product_name` VARCHAR(45) NOT NULL,
     `product_code` INT NOT NULL,
     `product_type` VARCHAR(30),
-    `product_size` VARCHAR(10),
-    `product_unity_value` DECIMAL(3,2) NOT NULL,
-    `product_image` VARCHAR(30) NOT NULL,
+    `product_size` VARCHAR(45),
+    `product_unity_value` DECIMAL(5,2) NOT NULL,
+    `product_image` VARCHAR(30),
     PRIMARY KEY (`product_id`)
 ) ENGINE = InnoDB DEFAULT CHARACTER SET utf8mb4;
+
+    /*------------ INSERTS ------------*/
+    INSERT INTO TB_product VALUES (DEFAULT, "Placa1", "1", "A", "20cm x 30cm", "20.00", "");
+    INSERT INTO TB_product VALUES (DEFAULT, "Placa2", "2", "B", "20cm x 30cm", "50.00", "");
+    INSERT INTO TB_product VALUES (DEFAULT, "Placa3", "3", "C", "20cm x 30cm", "180.00", "");
+    /*------------ INSERTS END ------------*/
+
 /*------------ PRODUCT END ------------*/
 
 /*------------ DEMAND ------------*/
