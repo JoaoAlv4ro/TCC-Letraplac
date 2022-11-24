@@ -139,3 +139,7 @@ CREATE TABLE IF NOT EXISTS `DB_Letraplac` . `TB_feedback` (
 /*------------ FEEDBACK END ------------*/
 
 
+SELECT * FROM TB_user_login;
+SELECT * FROM TB_product;
+SELECT * FROM TB_demand;
+SELECT * FROM TB_feedback;
