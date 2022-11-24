@@ -98,7 +98,7 @@ CREATE TABLE IF NOT EXISTS `DB_Letraplac` . `TB_demand` (
 ) ENGINE = InnoDB DEFAULT CHARACTER SET utf8mb4;
 
     /*------------ INSERTS ------------*/
-    INSERT INTO TB_demand VALUES (DEFAULT, 1, "2022-11-21", "A", "20.00", "1", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "", "1", "1");
+    INSERT INTO TB_demand VALUES (DEFAULT, 1, "2022-11-21", "A", "20.00", "1", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "", "2", "2");
     INSERT INTO TB_demand VALUES (DEFAULT, 2, "2022-11-22", "P", "100.00", "2", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "", "2", "2");
     INSERT INTO TB_demand VALUES (DEFAULT, 3, "2022-11-23", "E", "360.00", "3", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "", "3", "3");
     /*------------ INSERTS END ------------*/
@@ -107,7 +107,7 @@ CREATE TABLE IF NOT EXISTS `DB_Letraplac` . `TB_demand` (
 /*------------ FEEDBACK ------------*/
 CREATE TABLE IF NOT EXISTS `DB_Letraplac` . `TB_feedback` (
 	`feedback_id` INT NOT NULL AUTO_INCREMENT,
-    `feedback` VARCHAR(150),
+    `feedback` VARCHAR(256),
     `rating` ENUM("1","2","3","4","5") NOT NULL,
     `user_id` INT NOT NULL,
     `product_id` INT NOT NULL,
@@ -129,6 +129,13 @@ CREATE TABLE IF NOT EXISTS `DB_Letraplac` . `TB_feedback` (
         
     PRIMARY KEY (`feedback_id`)
 ) ENGINE = InnoDB DEFAULT CHARACTER SET utf8mb4;
+
+    /*------------ INSERTS ------------*/
+    INSERT INTO TB_feedback VALUES (DEFAULT, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "3", "2", "2");
+    INSERT INTO TB_feedback VALUES (DEFAULT, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "4", "2", "2");
+    INSERT INTO TB_feedback VALUES (DEFAULT, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "5", "3", "3");
+    /*------------ INSERTS END ------------*/
+
 /*------------ FEEDBACK END ------------*/
 
 
