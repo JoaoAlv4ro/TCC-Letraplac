@@ -107,6 +107,7 @@ CREATE TABLE IF NOT EXISTS `DB_Letraplac` . `TB_demand` (
 /*------------ FEEDBACK ------------*/
 CREATE TABLE IF NOT EXISTS `DB_Letraplac` . `TB_feedback` (
 	`feedback_id` INT NOT NULL AUTO_INCREMENT,
+    `feedback_date` DATE NOT NULL,
     `feedback` VARCHAR(256),
     `rating` ENUM("1","2","3","4","5") NOT NULL,
     `user_id` INT NOT NULL,
@@ -131,9 +132,9 @@ CREATE TABLE IF NOT EXISTS `DB_Letraplac` . `TB_feedback` (
 ) ENGINE = InnoDB DEFAULT CHARACTER SET utf8mb4;
 
     /*------------ INSERTS ------------*/
-    INSERT INTO TB_feedback VALUES (DEFAULT, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "3", "2", "2");
-    INSERT INTO TB_feedback VALUES (DEFAULT, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "4", "2", "2");
-    INSERT INTO TB_feedback VALUES (DEFAULT, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "5", "3", "3");
+    INSERT INTO TB_feedback VALUES (DEFAULT, "2022-11-24", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "3", "2", "2");
+    INSERT INTO TB_feedback VALUES (DEFAULT, "2022-09-25", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "4", "2", "2");
+    INSERT INTO TB_feedback VALUES (DEFAULT, "2022-07-26", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "5", "3", "3");
     /*------------ INSERTS END ------------*/
 
 /*------------ FEEDBACK END ------------*/
