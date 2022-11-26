@@ -19,12 +19,12 @@ CREATE TABLE IF NOT EXISTS `DB_Letraplac` . `TB_user_login` (
 
 CREATE TABLE IF NOT EXISTS `DB_Letraplac` . `TB_user_address` (
 	`address_id` INT NOT NULL AUTO_INCREMENT,
-    `address_CEP` DECIMAL(3,2) NOT NULL,
+    `address_CEP` VARCHAR(10) NOT NULL,
     `address_street` VARCHAR(100) NOT NULL,
     `address_number` INT NOT NULL,
     `address_district` VARCHAR(75) NOT NULL,
-    `address_complement` VARCHAR(20),
-    `address_city` VARCHAR(50) NOT NULL,
+    `address_complement` VARCHAR(45),
+    `address_city` VARCHAR(256) NOT NULL,
     `address_state` VARCHAR(2) NOT NULL,
     `user_id` INT NOT NULL,
     
@@ -41,6 +41,10 @@ CREATE TABLE IF NOT EXISTS `DB_Letraplac` . `TB_user_address` (
     INSERT INTO TB_user_login VALUES (DEFAULT, "Álvaro", "689.508.377-47", "2004-07-02", "joaosilvaabc1@gmail.com", "(12) 99637-4429", "Senha", "A");
     INSERT INTO TB_user_login VALUES (DEFAULT, "Vitor", "400.892.233-24", "2004-09-27", "joaovitorabc2@gmail.com", "(12) 992324-2526", "Senha", "C");
     INSERT INTO TB_user_login VALUES (DEFAULT, "Marco", "678.321.594-10", "2003-07-21", "marcoantoniabc3@gmail.com", "(12) 99452-3132", "Senha", "C");
+    
+    INSERT INTO TB_user_address VALUES (DEFAULT, "12345-01", "1", "Avenida Alagoas", "", "São José dos Campos", "SP", "1") 
+    INSERT INTO TB_user_address VALUES (DEFAULT, "12345-02", "2", "Avenida Vitoria", "Apartamento Bloco 2", "Vitoria da Conquista", "BH", "2")
+    INSERT INTO TB_user_address VALUES (DEFAULT, "12345-03", "3", "Avenida Marcos", "", "Jacareí", "SP", "3")
     /*------------ INSERTS END ------------*/
 
 /*------------ USER END ------------*/
