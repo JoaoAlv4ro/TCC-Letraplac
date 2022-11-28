@@ -42,9 +42,9 @@ CREATE TABLE IF NOT EXISTS `DB_Letraplac` . `TB_user_address` (
     INSERT INTO TB_user_login VALUES (DEFAULT, "Vitor", "400.892.233-24", "2004-09-27", "joaovitorabc2@gmail.com", "(12) 992324-2526", "Senha", "C");
     INSERT INTO TB_user_login VALUES (DEFAULT, "Marco", "678.321.594-10", "2003-07-21", "marcoantoniabc3@gmail.com", "(12) 99452-3132", "Senha", "C");
     
-    INSERT INTO TB_user_address VALUES (DEFAULT, "12345-01", "1", "Avenida Alagoas", "", "São José dos Campos", "SP", "1") 
-    INSERT INTO TB_user_address VALUES (DEFAULT, "12345-02", "2", "Avenida Vitoria", "Apartamento Bloco 2", "Vitoria da Conquista", "BH", "2")
-    INSERT INTO TB_user_address VALUES (DEFAULT, "12345-03", "3", "Avenida Marcos", "", "Jacareí", "SP", "3")
+    INSERT INTO TB_user_address VALUES (DEFAULT, "12345-01", "1", "Avenida Alagoas", "", "São José dos Campos", "SP", "1") ;
+    INSERT INTO TB_user_address VALUES (DEFAULT, "12345-02", "2", "Avenida Vitoria", "Apartamento Bloco 2", "Vitoria da Conquista", "BH", "2");
+    INSERT INTO TB_user_address VALUES (DEFAULT, "12345-03", "3", "Avenida Marcos", "", "Jacareí", "SP", "3");
     /*------------ INSERTS END ------------*/
 
 /*------------ USER END ------------*/
