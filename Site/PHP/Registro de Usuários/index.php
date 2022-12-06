@@ -30,9 +30,12 @@ include_once("../config.php");
 		$result_usuarios = "SELECT * FROM TB_user_login LIMIT $inicio, $qnt_result_pg";
 		$resultado_usuarios = mysqli_query($conn, $result_usuarios);
 		while($row_usuario = mysqli_fetch_assoc($resultado_usuarios)){
-			echo "ID: " . $row_usuario['user_id'] . "<br>";
+			echo "<br>ID: " . $row_usuario['user_id'] . "<br>";
 			echo "Nome: " . $row_usuario['user_name'] . "<br>";
-			echo "E-mail: " . $row_usuario['user_email'] . "<br><hr>";
+			echo "Senha: " . $row_usuario['user_password'] . "<br>";
+			echo "E-mail: " . $row_usuario['user_email'] . "<br>";
+			echo "Telefone: " . $row_usuario['user_contact'] . "<br>";
+			echo "Data de Nascimento: " . $row_usuario['user_birth'] . "<br><br><hr>";
 		}
 
 		
