@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS `DB_Letraplac` . `TB_user_login` (
 ) ENGINE = InnoDB;
 
 CREATE TABLE IF NOT EXISTS `DB_Letraplac` . `TB_user_address` (
-    `address_id` INT NOT NULL AUTO_INCREMENT,
+	`address_id` INT NOT NULL AUTO_INCREMENT,
     `address_CEP` VARCHAR(10) NOT NULL,
     `address_street` VARCHAR(100) NOT NULL,
     `address_number` INT NOT NULL,
@@ -141,8 +141,71 @@ CREATE TABLE IF NOT EXISTS `DB_Letraplac` . `TB_feedback` (
 
 /*------------ FEEDBACK END ------------*/
 
-
 SELECT * FROM TB_user_login;
 SELECT * FROM TB_product;
 SELECT * FROM TB_demand;
 SELECT * FROM TB_feedback;
+
+
+/*------------AVALIATION------------*/
+
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+
+--
+
+-- 
+--
+--
+
+CREATE TABLE `avaliacos` (
+  `id` int(11) NOT NULL,
+  `qnt_estrela` int(11) NOT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Fazendo dump de dados para tabela `avaliacos`
+--
+
+INSERT INTO `avaliacos` (`id`, `qnt_estrela`, `created`, `modified`) VALUES
+(1, 3, '2017-08-28 22:35:17', NULL),
+(2, 5, '2017-08-28 22:35:35', NULL);
+
+--
+-- Índices de tabelas apagadas
+--
+
+--
+-- Índices de tabela `avaliacos`
+--
+ALTER TABLE `avaliacos`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT de tabelas apagadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `avaliacoes`
+--
+ALTER TABLE `avaliacos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+/*------------EVALUATION ENDS------------*/
+
+select * from avaliacos;
