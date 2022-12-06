@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once("conexao.php");
+include_once("../config.php");
 
 if(!empty($_POST['estrela'])){
 	$estrela = $_POST['estrela'];
