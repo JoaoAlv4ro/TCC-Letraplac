@@ -34,16 +34,7 @@ include_once("../config.php");
 			echo "Nome: " . $row_usuario['user_name'] . "<br>";
 			echo "E-mail: " . $row_usuario['user_email'] . "<br><hr>";
 		}
-		
 
-		
-		
-		
-		
-		
-		
-		
-		
 		
 		//Paginção - Somar a quantidade de usuários
 		$result_pg = "SELECT COUNT(user_id) AS num_result FROM TB_user_login";
